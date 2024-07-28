@@ -30,4 +30,4 @@ jobs:
         cmake -H. -B_build -DCMAKE_C_COMPILER=gcc
         cmake --build _build
       shell: bash
-      working-directory: databaze_application
+      working-directory: databaze
