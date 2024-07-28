@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/databaze_application.dir/databaze.cpp.o -o databaze_application  Function_lib_dir/libFunction_lib.a 

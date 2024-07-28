@@ -1,0 +1,33 @@
+name: CMake_windows
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+  
+    
+    steps:
+    - name: checkout
+      uses: actions/checkout@v3
+    
+    - name: Build a Function library gcc
+      run: |
+        cmake -H. -B_build -DCMAKE_C_COMPILER=gcc
+        cmake --build _build
+      shell: bash
+      working-directory: Function_lib
+      
+    - name: Build a matrix application gcc
+      run: |
+        cmake -H. -B_build -DCMAKE_C_COMPILER=gcc
+        cmake --build _build
+      shell: bash
+      working-directory: databaze_application
